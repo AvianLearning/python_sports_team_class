@@ -3,6 +3,7 @@ class Team:
         self.name = name 
         self.players = players
         self.coach = coach
+        self.points = 0
 
     def add_player(self, player_name):
         self.players.append(player_name)
@@ -13,4 +14,9 @@ class Team:
                 return True
             
         return False
+
+    def play_game(self, win_status):
+        if win_status == True:
+            self.points += 3
+
 
